@@ -1,6 +1,6 @@
 # Web template
 
-Simple and responsive layout to customize for a personal website.
+Simple and responsive layout to customize for a personal researcher website.
 Template available in two versions: pure HTML text editing (`template/`) or with markdown (`template-markdown/`).
 
 Previews available for the different webpages:
@@ -10,11 +10,6 @@ Previews available for the different webpages:
 - `preview-publications.png` is the preview of the list of publications page for laptop-size screens. 
 - `preview-presentations.png` is the preview of the presentations page for laptop-size screens. 
 - `preview-teaching.png` is the preview of the list of courses page for laptop-size screens. 
-
-Enclosed a short presentation `2020May28-PersonalWebsite-NoAnimation.pdf` providing general advice about:
-- how to set up your web space as a DiS member.
-- how to modify your layout.
-- tips and general guidelines.
 
 ## Version 1 HTML editing: Template/ 
 
