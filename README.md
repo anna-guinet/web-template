@@ -69,3 +69,7 @@ This markdown is processed. You only see the following list to edit:
 ### This will not be processed.
 </div>
 ```
+
+# Licence
+
+The code is under the Creative Commons Zero v1.0 Universal licence.
