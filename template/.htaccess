@@ -1,0 +1,25 @@
+#TO EDIT the error page redirection
+ErrorDocument 404 https://www.ru.nl/dis/
+ErrorDocument 403 https://www.ru.nl/dis/
+ErrorDocument 400 https://www.ru.nl/dis/
+ErrorDocument 401 https://www.ru.nl/dis/
+
+IndexIgnore *
+IndexIgnore *.pdf
+IndexIgnore *.jpg
+
+DirectoryIndex index.php
+
+#Rename path .php to /
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Disallow reverse image research
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://www.cs.ru.nl/~aguinet/ [NC]
+#RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
+#Disallow access to file
+RewriteRule ^(robots\.txt) - [F,L,NC]

@@ -1,0 +1,258 @@
+/* Style the entire webpage */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: 'RobotoSlab', sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+/* Paragraph */
+p {
+	padding-bottom: 0.5em;
+	font-family: 'Roboto';
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+/* Item in lists */
+ul li {
+	font-family: 'Roboto';
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+/* Hyperlink */
+a {
+	color: black;
+}
+
+	/* Hyperlink when cursor is hover*/
+	a:hover {
+		color: #6653ff;
+	}
+
+
+/* Header/logo Title */
+.header {
+  padding: 0.5em 1.5em;
+  text-align: center;
+  background: white;
+  color: #231F20;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 30px;
+  color: #6653ff;
+}
+
+/* Style the top navigation bar */
+.nav-bar {
+  overflow: hidden;
+  background: white;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+/* Style the navigation bar links */
+.nav-bar a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 2%;
+  text-decoration: none;
+}
+
+	/* Right-aligned link */
+	.nav-bar a.right {
+	  float: right;
+	}
+	
+	/* Hyperlink when hover */
+	.nav-bar a:hover {
+	  color: #6653ff;
+	}
+
+/* Add space around menu links */
+.nav-link {
+	padding: 0 2%;
+}
+
+/* Column container */
+.content {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  /* we make sure content is long enough so that the bar is at the bottom */
+  /* 51px = nav bar */
+  /* 139px = header */
+  /* 162px = footer */
+  min-height: calc(100vh - 51px - 139px - 162px);
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.sidebar {
+  -ms-flex: 26%; /* IE10 */
+  flex: 26%;
+  background-color: #f1f2fa;
+  margin: 2%;
+  padding: 2%;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 62%; /* IE10 */
+  flex: 66%;
+  background-color: white;
+  padding: 2% 4%;
+}
+
+/* Images */
+img{
+	padding: 0.5em;
+	max-height:140px;
+}
+
+/* Center profile picture on side bar */
+.img-profile img{
+	max-height:200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Customize list for news */
+ul.news{
+	list-style: none;
+	padding-bottom: 0.5em;
+	padding-left: 0;
+}
+
+	/* Customize item category for news */
+	ul.news li.category{
+		font-style: italic;
+		/* color: #6653ff; */
+		font-size: 13px;
+		margin-bottom: 0.2em
+	}
+
+
+/* Customize list for publications */
+.publication ul{
+	list-style: none;
+	padding-bottom: 0.5em;
+}
+
+	/* Customize item for publications */
+	/* title */
+	.publication ul li:nth-child(1){
+		font-style: italic;
+	}
+	
+	/* Customize item for publications */
+	/* editor */
+	.publication ul li:nth-child(3){
+		font-weight: bold;
+	}
+	
+	/* Customize link for publications */
+	/* link */
+	.publication ul li:nth-child(4){
+	margin-top: 0.4em;
+	}
+	
+		/* Effect button-link for publications when cursor is hover */
+		.publication ul li:nth-child(4) a:hover{
+			background: #f1f2fa;
+			text-decoration: none;
+		}
+			
+		/* Customize button-link for publications */
+		.publication ul li:nth-child(4) a{
+			font-family: 'Roboto';
+			vertical-align: text-bottom;
+			margin: 0em 0.3em;
+			padding: 0.1em 0.6em;
+			background: white;
+			color:#6653ff;
+			text-align: center;
+			border: 1.5px solid #6653ff;
+			text-decoration: none;
+		}
+		
+		/* /!\ We do not display the first p following ul. this allows us to separates lists */
+		ul + p {
+			display:none;
+		}
+
+/* Footer */
+.footer {
+  padding: 2%;
+  text-align: center;
+  background: #2e2f32;
+  color: white;
+}
+
+/* Footer menu */
+ul.footer-bar{
+	list-style: none;
+}
+	/* Footer menu items */
+	ul.footer-bar li.text {
+		padding-top: 1.2em;
+		font-size: 13px;
+	}
+	
+	/* Footer menu items */
+	ul.footer-bar li.link {
+		padding: 0.3em 0;
+	}
+	
+		/* Footer menu items */
+		ul.footer-bar li.link a {
+			color: white;
+		}
+		
+		/* Hyperlink when hover */
+		ul.footer-bar li.link a:hover {
+		  color: #6653ff;
+		}
+
+/* Responsive layout - Small devices -  
+* when the screen is less than 48em */
+@media (max-width: 48em) {
+	
+	/* Make the two columns stack on top of each other instead of next to each other */
+	.content {   
+		flex-direction: column;
+	}
+}
+
+/* Responsive layout - Small devices -  
+* when the screen is less than 40em */
+@media (max-width: 40em) {
+	/* Make the navigation links stack on top of each other instead of next to each other */
+	.nav-bar a {
+	float: none;
+	width: 100%;
+ }
+}
+
+/* Responsive layout - Laptops size screen and higher -  
+* when the screen is more than 48em, 
+* refine some style */
+@media (max-width: 48em) {
+}
+
+/* Responsive layout - Large screens -  
+* when the screen is more than 90em, 
+* refine some style */
+@media (min-width: 90em){
+}
